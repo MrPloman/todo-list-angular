@@ -1,0 +1,20 @@
+<li>
+  <input
+    class="toggle"
+    type="checkbox"
+    [checked]="toDo.done"
+    (change)="updateToDoStatus($event)"
+  />
+  <label> </label>
+  <input
+    (focus)="isEditingToDo = true"
+    (focusout)="isEditingToDo = false; modifyingToDoTitle($event)"
+    [ngClass]="{ completed: toDo.done }"
+    type="text"
+    name="toDo.title"
+    id="title"
+    [value]="toDo.title"
+    (input)="modifyingToDoTitle($event)"
+  />
+  <button class="destroy" (click)="destroyToDo(toDo.id)"></button>
+</li>

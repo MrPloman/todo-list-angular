@@ -1,0 +1,37 @@
+<footer class="footer">
+  <!-- This should be `0 items left` by default -->
+  <span class="todo-count"
+    ><strong>{{ counterOfTodos }}</strong> item left</span
+  >
+  <!-- Remove this if you don't implement routing -->
+  <ul class="filters">
+    <li>
+      <a
+        style="cursor: pointer"
+        [ngClass]="{ selected: filter === 'all' }"
+        (click)="setFilter('all')"
+        >All</a
+      >
+    </li>
+    <li>
+      <a
+        style="cursor: pointer"
+        [ngClass]="{ selected: filter === 'active' }"
+        (click)="setFilter('active')"
+        >Active</a
+      >
+    </li>
+    <li>
+      <a
+        style="cursor: pointer"
+        [ngClass]="{ selected: filter === 'completed' }"
+        (click)="setFilter('completed')"
+        >Completed</a
+      >
+    </li>
+  </ul>
+  <!-- Hidden if no completed items are left ↓ -->
+  <button (click)="clearDoneTodos()" class="clear-completed">
+    Clear completed
+  </button>
+</footer>

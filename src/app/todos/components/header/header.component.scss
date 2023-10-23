@@ -1,0 +1,12 @@
+.toggle-all + label::before,
+.toggle-all + label {
+  left: 20px;
+  color: grey !important;
+}
+
+label::before.selected {
+  color: black !important;
+}
+.new-todo {
+  padding: 16px 16px 16px 95px;
+}

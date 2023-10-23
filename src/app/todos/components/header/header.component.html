@@ -1,0 +1,22 @@
+<header class="header">
+  <h1>todos</h1>
+  <input
+    [(ngModel)]="newToDo"
+    name="newToDo"
+    class="new-todo"
+    placeholder="What needs to be done?"
+    autofocus
+    (keyup.enter)="setNewToDo()"
+  />
+
+  <input
+    id="toggle-all"
+    class="toggle-all"
+    type="checkbox"
+    [ngClass]="{ selected: toogleStatus }"
+    (click)="setAllToDosStatus()"
+  />
+  <label style="top: 0px !important" for="toggle-all"
+    >Mark all as complete</label
+  >
+</header>

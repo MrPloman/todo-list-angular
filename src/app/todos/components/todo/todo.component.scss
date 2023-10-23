@@ -1,0 +1,19 @@
+li {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+}
+
+li > label.completed {
+  text-decoration: line-through;
+}
+li > label {
+  font-size: 0px;
+}
+li > input[type="text"] {
+  all: unset;
+}
+li > input[type="text"].completed {
+  text-decoration: line-through;
+  color: grey;
+}
