@@ -14,7 +14,6 @@ export class TodosListComponent {
   constructor(private store: Store<IAppState>) {}
   ngOnInit(): void {
     this.store.subscribe(({ todos, filter }) => {
-      console.log(filter);
       if (filter === 'all') this.toDos = todos;
       else if (filter === 'completed')
         this.toDos = todos.filter((todo) => todo.done);
