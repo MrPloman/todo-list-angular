@@ -1,6 +1,6 @@
 import { createFeatureSelector, createSelector } from '@ngrx/store';
 import { IAppState } from '../../app.state';
 
-const selectIIAppState = createFeatureSelector<IAppState>('todos');
+const selectIAppState = createFeatureSelector<IAppState>('todos');
 
-export const selectToDos = createSelector(selectIIAppState, (state) => state);
+export const selectToDos = createSelector(selectIAppState, (state) => state);
